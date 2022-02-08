@@ -5,18 +5,23 @@ import {
   
 } from "./Filter.styled";
 
-const Filter = ({ handleChange, filter }) => {
-  return (
-    <Label>
-      Find contacts by name
-      <Input onChange={handleChange} type="text" name="filter" value={filter} />
-    </Label>
-  );
-};
+const Filter = ({ value, onChange }) => (
+  <Label>
+    Find contacts by name
+    <Input
+      type="text"
+      name="filter"
+      value={value}
+      onChange={onChange}
+      pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+      title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+    />
+  </Label>
+);
 
 export default Filter;
 
 Filter.propTypes = {
-  handleChange: PropTypes.func.isRequired,
-  filter: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
 };

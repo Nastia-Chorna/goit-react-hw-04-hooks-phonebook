@@ -1,6 +1,6 @@
-import React from 'react';
+// import React from 'react';
 // import ContactWrap from '../ContactWrap/ContactWrap';
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import {
     List,
     Button
@@ -27,14 +27,14 @@ const ContactList = ({ contacts, onDeleteName }) => {
     </List>
   );
 };
-ContactList.propTypes= {
-    contacts: PropTypes.arrayOf(
-        PropTypes.shape({
-            id: PropTypes.string.isRequired,
-            name: PropTypes.string.isRequired,
-            number: PropTypes.string.isRequired,
-        }).isRequired,
-    ),
-    onDeleteName: PropTypes.func.isRequired
-};
+// ContactList.propTypes= {
+//     contacts: PropTypes.arrayOf(
+//         PropTypes.shape({
+//             id: PropTypes.string.isRequired,
+//             name: PropTypes.string.isRequired,
+//             number: PropTypes.string.isRequired,
+//         }).isRequired,
+//     ),
+//     onDeleteName: PropTypes.func.isRequired
+// };
 export default ContactList;
